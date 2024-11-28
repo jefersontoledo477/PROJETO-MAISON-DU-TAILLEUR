@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison du Tailleur</title>
+    <link rel="icon" href="/images/logo.png">
+
+    <link rel="stylesheet" href="/Style/preloaderStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/Style/tela_de_login.css">
+</head>
+<body>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+       <!-- preloader -->
+  <div id="preloader">
+    <div class="wrapper">
+        <div class="box-wrap">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+            <div class="box four"></div>
+            <div class="box five"></div>
+            <div class="box six"></div>
+        </div>
+    </div>
+</div>
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">Bem-vindo ao Maison du Tailleur</div>
+            <div class="card-description">Sua jornada rumo à elegância e sofisticação começa aqui.</div>
+        </div>
+        <div class="tabs">
+            <button type="button" class="tab-link active" data-tab="login" >Login</button>
+            <button type="button" class="tab-link" data-tab="signup">Cadastre-se</button>
+        </div>
+        <div class="tab-container">
+            <div class="tab-content active" id="login">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">E-mail</label>
+                        <input type="email" id="login-email" placeholder="Escreva seu E-mail" required>
+                        <div class="error" id="login-email-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Senha</label>
+                        <input type="password" id="login-password" placeholder="Escreva sua Senha" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('login-password')"></i>
+                        <div class="error" id="login-password-error"></div>
+                    </div>
+
+                    <div class="form-group remember-me">
+                        <input type="checkbox" id="remember-me" />
+                        <label for="remember-me" >Lembre-se de mim.</label> 
+                    </div>
+
+                    <div class="forgot-password">
+                        <a href="#" onclick="openModal()">Esqueceu sua senha?</a>
+                    </div>
+                    
+               
+                    <button type="submit" class="btn" id="login-btn" >Entrar</button>
+                    <button type="submit" class="btn1" id="login-btn" style=" background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=); background-repeat: no-repeat; background-position: 20% 50%; background-size: 30px;"><a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F&ec=GAlAwAE&hl=en_GB&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1527110508%3A1729760212648495&ddm=0">Entrar com o Google</a></button>
+                    <button type="submit" class="btn2" id="login-btn"     style=" background-image: url(https://cdn.freebiesupply.com/logos/large/2x/facebook-logo-2019.png); background-repeat: no-repeat; background-position: 20% 50%; background-size: 30px;"><a href="https://www.facebook.com/login/">Entrar com o Facebook</button>
+                        
+                        <button type="submit" class="btnn3" id="login-btn"     style=" background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png); background-repeat: no-repeat; background-position: 20% 50%; background-size: 30px;"><a href="https://x.com/i/flow/login">Entrar com o X</button>
+                       
+
+                            <div class="not-member"> 
+                              <span class="Not">  Não é membro? </span><a href="#" id="signUpLink">Cadastre-se</a>
+                            </div>
+                  
+
+                    <div class="success" id="login-success">Login bem-sucedido!</div>
+                </form>
+               
+            </div>
+            <div class="tab-content" id="signup">
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Nome</label>
+                        <input type="text" id="signup-name" placeholder="Digite seu nome:" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">E-mail</label>
+                        <input type="email" id="signup-email" placeholder="Digite seu E-mail:" required>
+                        <div class="error" id="signup-email-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Senha</label>
+                        <input type="password" id="signup-password" placeholder="Crie uma senha:" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('signup-password')"></i>
+                        <div class="error" id="signup-password-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirmar senha</label>
+                        <input type="password" id="signup-confirm-password" placeholder="Confirmar senha:" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('signup-confirm-password')"></i>
+                        <div class="error" id="signup-confirm-password-error"></div>
+                    </div>
+                    <button type="submit" class="btn" id="signup-btn">Cadastre-se</button>
+                    <button type="submit" class="btn1" id="login-btn" style=" background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=); background-repeat: no-repeat; background-position: 20% 50%; background-size: 30px;"><a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F&ec=GAlAwAE&hl=en_GB&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1527110508%3A1729760212648495&ddm=0">Cadastre-se com Google</a></button>
+                    <button type="submit" class="btn2" id="login-btn"     style=" background-image: url(https://cdn.freebiesupply.com/logos/large/2x/facebook-logo-2019.png); background-repeat: no-repeat; background-position: 20% 50%; background-size: 30px;"><a href="https://www.facebook.com/login/">Cadastre-se com Facebook</button>
+                        
+                        <button type="submit" class="btnn3" id="login-btn"     style=" background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png); background-repeat: no-repeat; background-position: 20% 50%; background-size: 30px;"><a href="https://x.com/i/flow/login">Cadastre-se com X</button>
+                    <div class="success" id="signup-success">Cadastro feito com sucesso!</div>
+                </form>
+                <div class="already-have-account">   
+                   <span>Já tem uma conta?</span><a href="#" id="signUpLink">Login</a>
+            </div>
+        </div>
+        <div class="card-footer">
+            <p>Ao se inscrever, você concorda com nossos<a href="Termos-Condições.html">Termos de Serviço</a> e <a href="privacy.html">política de Privacidade</a>.</p>
+        </div>
+    </div>
+
+    <!-- Caixa de recuperação de senha -->
+    <div id="passwordRecoveryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Recuperação de senha</h2>
+            <form id="password-recovery-form">
+                <div class="form-group">
+                    <label for="recovery-email">E-Mail</label>
+                    <input type="email" id="recovery-email" placeholder="Digite seu e-mail" required>
+                    <div class="error" id="recovery-email-error"></div>
+                </div>
+                <button type="submit" class="btn">Enviar E-Mail de recuperação</button>
+                <div class="success" id="recovery-success">E-Mail de recuperação enviado!</div>
+            </form>
+        </div>
+    </div>
+<script src="preloader.js"></script>
+<script src="script/progressbar.js"></script>
+<script src="/script/Tela_de_login.js"></script>
+
+</body>
+</html>

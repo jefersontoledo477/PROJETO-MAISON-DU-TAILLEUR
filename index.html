@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title>Maison du Tailleur</title>
+    <link rel="icon" href="/images/logo.png">
+
+    <link rel="stylesheet" href="/Style/preloaderStyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="./Style/popup.css">
+    <link rel="stylesheet" href="/Style/index.css">
+   <style>
+
+    </style>
+</head>
+
+<body>
+     <!-- preloader -->
+  <div id="preloader">
+    <div class="wrapper">
+        <div class="box-wrap">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+            <div class="box four"></div>
+            <div class="box five"></div>
+            <div class="box six"></div>
+        </div>
+    </div>
+</div>
+<div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+    <!-- header section  -->
+    <header class="header" id="header">
+        <div class="logo">
+            <a href="/"> <img  src="/images/logo.png" alt="Logo" srcset=""> </a>
+            <i class="fa-solid fa-bars menu theme-icon" id="menu"></i>
+        </div>
+
+        <nav class="bg-neutral-100 py-20">
+            <div class="tabs-container">
+                <ul id="tabs" class="tabs">
+                    <li class="tab">
+                        <a href="index.html" class="active">Inicio</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="Sobrenos.html">Sobre</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="Características.html">Características</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="dropdown tab">
+                        <a class="dropdown-parent">Produtos</a>
+                        <div class="cursor"></div>
+                        <ul class="dropdown-content ">
+                            <li><a href="mens.html" class="priye">Men</a>
+                            </li>
+                            <li><a href="womens.html">Mulheres</a></li>
+                            <li><a href="accessories.html">Acessórios</a></li>
+                        </ul>
+                    </li>
+                    <li class="tab" style="margin-left: 15px;">
+                        <a href="Contatos.html">Contate-nos</a>
+                        <div class="cursor"></div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+        
+       
+        
+        <nav class="utils">
+            <ul class="nav-links">
+                <li>
+                    <button class="mode-toggle" id="modeToggle">                                                                                                                                                                                 
+                        <span class="sun-icon glow"><img src="/images/day-mode.png" alt="Light mode"></span>
+                        <span class="moon-icon glow hidden"><img src="/images/moon.png" alt="Dark mode"></span>
+                    </button>
+                </li>
+                <li class="nav-link">
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                </li>
+                <li class="nav-link">
+                    <a href="Tela_de_login.html">
+                        <i class="fa-solid fa-user theme-icon"></i>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Search Bar -->
+    <div id="search-bar">
+        <input type=" text " id=" search " placeholder=" Search..." />
+        <button type="submit" id="search-btn">Go</button> <!-- Add ID to the button -->
+    </div>
+    <script src=" preloader.js "></script>
+    <style>
+    /* Style for the search bar, initially hidden */
+    
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Get the search icon and search bar elements
+        const searchIcon = document.getElementById("search-icon"); 
+        const searchBar = document.getElementById("search-bar");
+
+        // Toggle the visibility of the search bar when the icon is clicked
+        searchIcon.onclick = function() {
+            if (searchBar.style.display === "none" || searchBar.style.display === "") {
+                searchBar.style.display = "block";  // Show the search bar
+                searchBar.querySelector('input').focus(); // Automatically focus on the input field
+            } else {
+                searchBar.style.display = "none";  // Hide the search bar
+            }
+        }
+
+        // Search button functionality
+        const searchBtn = document.getElementById("search-btn");
+        searchBtn.onclick = function() {
+            var query = document.getElementById('search').value;
+            if(query) {
+                console.log("Search query:", query);
+                // Implement your search logic here, such as a redirect or an API call
+                // window.location.href = '/search-results?q=' + encodeURIComponent(query);
+
+                // Hide the search bar after clicking "Go"
+                searchBar.style.display = "none";
+            } else {
+                console.log("No search query entered");
+            }
+        }
+        const toggleBtn = document.getElementById("modeToggle")
+        toggleBtn.onclick = () => {
+            const sun = document.querySelector(".sun-icon")
+            const moon = document.querySelector(".moon-icon")
+            //moon.style.display = "grid";
+            sun.classList.toggle("hidden");
+            moon.classList.toggle("hidden");
+
+            document.body.classList.toggle("dark-theme");
+        }
+    });
+</script>
+ <!-- banner area  -->
+    <section class="banner">
+
+        <div class="slide">
+
+            <div class="slide-details" data-aos="fade-up" data-aos-easing="ease-in-out">
+                <h1><p>Discover Tomorrow's Trends Today with TrendTrove!</p></h1>
+                <p>
+                    At MaisonduTailleur, we bring you the most stylish and trendy fashion items, all in one place!
+                </p>
+                <button class="btn">
+                    Explore More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pop up Html  -->
+         <!-- Pop-up for email registration -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="images/popup1.jpg" alt="Fashion Image">
+            </div>
+            <div class="popup-right">
+                <a href="#" class="no-thanks"><img class="popuplogo" src="images/logo.png" alt="Logo" srcset=""></a>
+                <h1>Join MaisonduTailleur!</h1>
+
+                <h2 class="popuph2">Unlock Your Fashion</h2>
+                <p>Sign up now to enjoy <strong> 20% off </strong> your first order and exclusive updates on the latest trends.</p>
+                <form id="emailForm">
+                    <input type="email" id="popup-email" placeholder="Enter your email" required>
+                    <button type="submit" class="signup-btn">Continue</button>
+                </form>
+                <a href="#" class="no-thanks close-btn">No thanks, I’ll shop full price</a>
+                <p class="terms">By signing up, you agree to our <a href="Termos-Condições.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- featured section  -->
+
+    <section class="featured" data-aos="fade-left" data-aos-delay="300">
+        <div class="featured-box-1">
+            <div class="overlay">
+                <a href="./shopclothing.html" class="btn btn-white">
+                    Shop Clothing
+                </button></a>
+            </div>
+            <div class="bg-image">
+                <img src="./images/youngcouple1.jpg" alt="product">
+            </div>
+        </div>
+
+        <div class="featured-box-2">
+            <div class="featured-box-2-box-1">
+                <div class="overlay">
+                    <a href="./products/sunglasses.html" class="btn btn-white">
+                        Shop Sunglasses
+                    </a>
+                </div>
+                <div class="bg-image">
+                    <img src="./images/shop-glasses.webp" alt="product">
+                </div>
+            </div>
+            <div class="featured-box-2-box-2">
+                <div class="overlay">
+                    <a href="./products/bags.html" class="btn btn-white">
+                        Shop Bags
+                    </a>
+                </div>
+                <div class="bg-image">
+                    <img src="./images/shop-bags.webp" alt="product">
+                </div>
+            </div>
+
+            <div class="featured-box-2-box-3">
+                <div class="overlay">
+                    <a href="./products/sandals.html" class="btn btn-white">
+                        Shop Sandals
+                    </a>
+                </div>
+                <div class="bg-image">
+                    <img src="./images/shop-sandals.webp" alt="product">
+                </div>
+            </div>
+        </div>
+
+        <div class="featured-box-3">
+            <div class="overlay">
+                <a href="sneaker.html" class="btn btn-white">
+                    Shop Sneakers
+                </a>
+                
+            </div>
+            <div class="bg-image">
+                <img src="./images/shop-sneakers.webp" alt="product">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Produtos section  -->
+
+    <section class="products">
+        <h1 class="section-title">Top Produtos Of The Season!</h1>
+
+        <div class="products-list">
+
+            <div class="product" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-image">
+                    <div class="main-image">
+                        <img src="./images/blackstrippedmaneffectimage.jpg" alt="product">
+                    </div>
+                    <div class="effect-image">
+                        <img src="./images/blackstrippedmannormal.jpeg" alt="product">
+                    </div>
+                    <div class="overlay-image">
+                        <button class="heartbtn" id="heart">
+                            &#10084;
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="product-details">
+                    <p class="product-name">Black Striped Shirt</p>
+                    <p class="product-price">- R$199</p> 
+                </div>
+
+            </div>
+
+            <div class="product" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="product-image">
+
+                    <div class="main-image">
+                        <img src="./images/product2.jpg" alt="product">
+                    </div>
+                    <div class="effect-image">
+                        <img src="./images/product2-effect.jpg" alt="product">
+                    </div>
+                    <div class="overlay-image">
+                        <button class="heartbtn" id="heart">
+                            &#10084;
+                        </button>
+                    </div>
+
+
+                </div>
+
+                <div class="product-details">
+                    <p class="product-name">Black Top</p>
+                    <p class="product-price">- R$99</p> 
+                </div>
+
+            </div>
+
+
+            <div class="product" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="product-image">
+
+                    <div class="main-image">
+                        <img src="./images/product3-effect.jpg" alt="product">
+                    </div>
+                    <div class="effect-image">
+                        <img src="./images/product3.webp" alt="product">
+                    </div>
+                    <div class="overlay-image">
+                        <button class="heartbtn" id="heart">
+                            &#10084;
+                        </button>
+                    </div>
+
+
+                </div>
+
+                <div class="product-details">
+                    <p class="product-name">Olive Green Top</p>
+                    <p class="product-price">- R$100</p> 
+                </div>
+
+            </div>
+
+            <div class="product" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="product-image">
+
+                    <div class="main-image">
+                        <img src="./images/whitetshirtmen.jpeg" alt="product">
+                    </div>
+                    <div class="effect-image">
+                        <img src="./images/whitetshirtmeneffect.jpeg" alt="product">
+                    </div>
+                    <div class="overlay-image">
+                        <button class="heartbtn" id="heart">
+                            &#10084;
+                        </button>
+                    </div>
+
+
+                </div>
+
+                <div class="product-details">
+                    <p class="product-name">White T-shirt</p>
+                    <p class="product-price">- R$100</p> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- category section  -->
+
+    <section class="categories">
+
+        <div class="category" data-aos="zoom-in" data-aos-delay="200">
+
+            <div class="cat-img">
+                <img src="./images/category1.webp" alt="category">
+            </div>
+
+            <div class="product-details">
+                <p class="product-name">Night Suits</p>
+            </div>
+
+        </div>
+
+        <div class="category" data-aos="zoom-in" data-aos-delay="200">
+
+            <div class="cat-img">
+                <img src="./images/category2.webp" alt="category">
+            </div>
+
+            <div class="product-details">
+                <p class="product-name">Hand Bags</p>
+            </div>
+        </div>
+
+        <div class="category" data-aos="zoom-in" data-aos-delay="200">
+            <div class="cat-img">
+                <img src="./images/category3.webp" alt="category">
+            </div>
+            <div class="product-details">
+                <p class="product-name">Funky Tops</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Produtos section 2 -->
+    <section class="products">
+        <h1 class="section-title">Most Bought Produtos Of The Month!</h1>
+
+        <div class="products-list">
+
+            <div class="product" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="product-image">
+
+                    <div class="main-image">
+                        <img src="./images/product5.jpg" alt="product">
+                    </div>
+                    <div class="effect-image">
+                        <img src="./images/product5-effect.jpg" alt="product">
+                    </div>
+                    <div class="overlay-image">
+                        <button class="heartbtn" id="heart">
+                            &#10084;
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-details">
+                    <p class="product-name">Black Top</p>
+                    <p class="product-price">- R$100</p> 
+                </div>
+            </div>
+
+            <div class="product" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="product-image">
+
+                    <div class="main-image">
+                        <img src="./images/product6.jpg" alt="product">
+                    </div>
+                    <div class="effect-image">
+                        <img src="./images/product6-effect.jpg" alt="product">
+                    </div>
+                    <div class="overlay-image">
+                        <button class="heartbtn" id="heart">
+                            &#10084;
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-details">
+                    <p class="product-name">Red Top</p>
+                    <p class="product-price">- R$100</p> 
+                </div>
+
+            </div>
+
+            <div class="product" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="product-image">
+                    <div class="main-image">
+                        <img src="./images/tealimageshirtmen.jpeg" alt="product">
+                    </div>
+                    <div class="effect-image">
+                        <img src="./images/tealshirtmeneffect.jpeg" alt="product">
+                    </div>
+                    <div class="overlay-image">
+                        <button class="heartbtn" id="heart">
+                            &#10084;
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-details">
+                    <p class="product-name">Light Teal Shirt</p>
+                    <p class="product-price">- R$199</p> 
+                </div>
+            </div>
+
+            <div class="product" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="product-image">
+                    <div class="main-image">
+                        <img src="./images/product8.jpg" alt="product">
+                    </div>
+                    <div class="effect-image">
+                        <img src="./images/product8-effect.jpg" alt="product">
+                    </div>
+                    <div class="overlay-image">
+                        <button class="heartbtn" id="heart">
+                            &#10084;
+                        </button>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <p class="product-name">Black Top</p>
+                    <p class="product-price">- R$399</p> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- shop from insta section  -->
+
+    <section class="insta">
+        <h1 class="section-title">Shop From The Gram</h1>
+
+        <div class="posts">
+            <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-brands fa-instagram"></i>
+                <img src="./images/insta1.webp" alt="insta">
+            </div>
+            <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-brands fa-instagram"></i>
+                <img src="./images/insta2.webp" alt="insta">
+            </div>
+            <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-brands fa-instagram"></i>
+                <img src="./images/insta3.webp" alt="insta">
+            </div>
+            <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-brands fa-instagram"></i>
+                <img src="./images/insta4.webp" alt="insta">
+            </div>
+            <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-brands fa-instagram"></i>
+                <img src="./images/insta5.webp" alt="insta">
+            </div>
+            <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-brands fa-instagram"></i>
+                <img src="./images/insta6.webp" alt="insta">
+            </div>
+        </div>
+        <div class="feedback-container">
+        
+            <h2>Have feedback?&nbsp;<a href="feedback.html" target="_blank"><span>Click here</span></a> to share your thoughts with us.</h2>
+        </div>
+    </section>
+    
+    
+    <!-- footer section  -->
+    <footer class="footer">
+
+        <div class="footer-section">
+
+            <h1>Contate-nos</h1>
+            <ul class="footer-list">
+                <li>maisondutailleur9@gmail.com</li>
+                <li>
+                    Brasil, Alagoas
+                </li>
+                <li>+55 xxxxxx1905</li>
+
+                <li class="border-list">
+                </li>
+                <li class="socials">
+                    <a href="https://www.linkedin.com/in/jeferson-toledo-700453231/" id="linkedin" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/jeferson_toledo_/" id="instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="visitor-counter">
+            <span class="icon">👁️</span> <!-- You can replace this with an eye icon image if you prefer -->
+            <span id="visitorCount">Visitors Count:</span>
+            <span class="website-counter">0</span>
+        </div>
+    <script>
+          // Function to get the count from localStorage or initialize it
+    function getVisitorCount() {
+    return localStorage.getItem('visitorCount') || 0;
+    }
+
+    // Function to increment and save the count
+    function incrementVisitorCount() {
+    let count = parseInt(getVisitorCount()) + 1;
+    localStorage.setItem('visitorCount', count);
+    return count;
+    }
+
+    // Function to display the count
+    function displayVisitorCount() {
+    const counterElement = document.querySelector('.website-counter');
+    const count = incrementVisitorCount();
+    counterElement.textContent = count;
+    }
+
+    // Call the display function when the page loads
+    document.addEventListener('DOMContentLoaded', displayVisitorCount);
+    </script>
+
+        <div class=" footer-section quick-links ">
+            <h1>Links rápidos</h1>
+            <ul class="footer-list">
+                <li><a href="Sobrenos.html"><i class="fas fa-info-circle"></i> Sobre nós</a></li>
+  <li><a href="contributors.html"><i class="fas fa-users"></i> Our Contributors</a></li>
+  <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ's</a></li>
+  <li><a href="Termos-Condições.html"><i class="fas fa-file-contract"></i> Termos e Condições</a></li>
+  <li><a href="return-policy.html"><i class="fas fa-undo-alt"></i> Return Policy</a></li>
+  <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank"><i class="fab fa-github"></i> Star Us</a></li>
+  <li><a href="Contatos.html"><i class="fas fa-envelope"></i> Contate-nos</a></li>
+  <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h1>Subscribe to Newsletter</h1>
+            <ul class="footer-list">
+                <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
+                <li>Join our fashion community today!</li>
+                <li class="sub">
+                    <input type="email" placeholder="Enter your email here" id="email-input">
+                    <button class="btn" id="open-btn">Subscribe</button>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+        
+        <div class="footer-copyright">
+            <div id="copyright">&copy; <span id="year"></span> MaisonduTailleur. All Rights Reserved.</div>
+        </div>
+        
+        <script>
+            const currentYear = new Date().getFullYear();
+            document.getElementById('year').textContent = currentYear;
+        </script>
+        
+        <div class="modal-box" id="modalbox" style="display: none;">
+            <div class="modal" id="modal">
+                <div id="close-btn">&times;</div>
+                <div class="modal-content">
+                    <img src="images\confirmation.png" alt="" height="100px" >
+                    <h2>Subscription Successful!</h2>
+                    <p>Thank you for subscribing.</p>
+                    <p> You will receive notifications, updates via email.</p>
+                </div>
+                <div class="social">
+                    <li class="socials">
+                        <a href="https://www.linkedin.com/in/jeferson-toledo-700453231/" id="linkedin" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jeferson_toledo_/" id="instagram" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    <script src="./script/modal_box.js"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- ProgressBar Functionality -->
+    <script src="script/progressbar.js"></script>
+<script>
+    gsap.from("#header", {
+        duration: 1.5,
+        y: -100,
+        opacity: 0,
+        ease: "power4.out",
+        stagger: 1,
+    });
+
+    gsap.from(".nav-link", {
+        duration: 1,
+        opacity: 0,
+        y: 20,
+        delay: 0.5,
+        stagger: 0.2,
+        ease: "power3.out"
+    });
+
+    gsap.from("h1", {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        delay: 0.7,
+        stagger: 0.2,
+        ease: "power3.out"
+    });
+
+    gsap.from("p", {
+        duration: 1.5,
+        opacity: 0,
+        y: 30,
+        delay: 0.9,
+        stagger: 0.3,
+        ease: "power2.out"
+    });
+
+    gsap.from(".btn", {
+        duration: 1,
+        scale: 0.8,
+        opacity: 0,
+        delay: 1.2,
+        ease: "back.out(1.7)",
+        stagger: 0.2
+    });
+
+    gsap.from("img", {
+        duration: 1.5,
+        opacity: 0,
+        scale: 0.9,
+        delay: 1.5,
+        stagger: 0.3,
+        ease: "elastic.out(1, 0.3)"
+    });
+
+    gsap.from(".overlay", {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        delay: 1.7,
+        stagger: 0.3,
+        ease: "power3.out"
+    });
+
+    gsap.from(".footer-section", {
+        scrollTrigger: ".footer",
+        duration: 1.5,
+        opacity: 0,
+        y: 50,
+        ease: "power2.out",
+        stagger: 0.3,
+    });
+
+    
+    gsap.from(".socials i", {
+        scrollTrigger: ".footer",
+        duration: 1,
+        opacity: 0,
+        scale: 0.5,
+        ease: "bounce.out",
+        stagger: 0.2,
+        delay: 0.5
+    });
+</script>
+
+<script>const tabs = document.querySelectorAll('.tab');
+    const cursor = document.getElementById('cursor');
+    
+    tabs.forEach(tab => {
+ 
+        tab.addEventListener('mouseenter', () => {
+            cursor.style.width = `${tab.offsetWidth}px`; // Set width to the current tab's width
+            cursor.style.left = `${tab.offsetLeft}px`; // Move cursor to the current tab's position
+ 
+       
+ 
+            cursor.style.opacity = 1; 
+        });
+    
+        tab.addEventListener(' mouseleave', () => {
+            cursor.style.opacity = 0; 
+        });
+    });
+    
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  (function() {
+      let headerVisible = false;
+      document.getElementById(" menu").addEventListener("click", function () {
+          if (headerVisible === false) {
+              document.getElementById(" header").style.height = "290px";
+              headerVisible = true;
+          } else {
+              document.getElementById(" header").style.height = "50px";
+              headerVisible = false;
+          }
+      });
+
+      // Show "Go to Top" button after scrolling down
+      const goTopBtn = document.querySelector(" .gotopbtn");
+      window.addEventListener(" scroll", function () {
+          if (window.scrollY > 200) {  // Show the button after scrolling down 200px
+              goTopBtn.style.display = "block";
+          } else {
+              goTopBtn.style.display = "none";
+          }
+      });
+
+  })();  // IIFE to avoid polluting global scope
+
+  
+        // When the cart icon is clicked, navigate to the 'carrinho.html' page.
+document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "carrinho.html";
+});
+
+  
+</script>
+
+<div class="gtranslate_wrapper"></div>
+        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+<script>
+
+    window.addEventListener('scroll', function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+    </script>
+
+<script src="./script/popup.js"></script>
+<button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
+    <div class="scroll-top-icon">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <svg class="progress-ring" width="60" height="60">
+        <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
+            cy="30"></circle>
+    </svg>
+</button>
+<style>
+    
+</style>
+<script>
+    // Get the button
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    const progressCircle = document.querySelector(".progress-ring__circle");
+    const radius = progressCircle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+
+    // Set the circle progress properties
+    progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+    progressCircle.style.strokeDashoffset = circumference;
+
+    // Function to show or hide the button based on scroll position
+    function toggleScrollButton() {
+        if (window.scrollY > 100) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
+    }
+
+    // Function to set the scroll progress on the button ring
+    function setProgress(percent) {
+        const offset = circumference - (percent / 100) * circumference;
+        progressCircle.style.strokeDashoffset = offset;
+    }
+
+    // Listen for scroll events to update button visibility and progress
+    window.addEventListener("scroll", () => {
+        toggleScrollButton();
+        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        setProgress(scrollPercent);
+    });
+
+    // Smooth scroll to top when the button is clicked
+    scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+  </script>
+</
