@@ -239,69 +239,6 @@
   </div>
   <script src="preloader.js"></script>
 
-<script>
-    document.getElementById("cart-icon").addEventListener("click", function() {
-    window.location.href = "carrinho.html";
-});
- 
-    let openbtn = document.getElementById("open-btn");
-    let modalbox = document.getElementById("modalbox");
-    let closebtn = document.getElementById("close-btn");
-    let emailInput = document.getElementById("email-input");
-
-    // Email validation function
-    function isValidEmail(email) {
-      // Regular expression for validating an email
-      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return regex.test(email);
-    }
-
-    openbtn.addEventListener("click", function () {
-      // Validate email
-      if (emailInput.value === "") {
-        alert("Please enter your email address.");
-      } else if (!isValidEmail(emailInput.value)) {
-        alert("Please enter a valid email address.");
-      } else {
-        modalbox.style.display = "block"; // Show the modal
-      }
-    });
-
-    closebtn.addEventListener("click", function () {
-      modalbox.style.display = "none"; // Hide the modal
-    });
-    // Close modal when clicking outside of it
-    modalbox.addEventListener("click", function (event) {
-      if (event.target === modalbox) {
-        modalbox.style.display = "none"; // Hide modal if the background is clicked
-      }
-    });
-  </script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-
-      let headerVisible = false;
-      document.getElementById("menu").addEventListener("click", function () {
-          if (headerVisible === false) {
-              document.getElementById("header").style.height = "290px";
-              headerVisible = true;
-          } else {
-              document.getElementById("header").style.height = "50px";
-              headerVisible = false;
-          }
-      });
-
-      // Show "Go to Top" button after scrolling down
-      const goTopBtn = document.querySelector(".gotopbtn");
-      window.addEventListener("scroll", function () {
-          if (window.scrollY > 300) {  // Show the button after scrolling down 200px
-              goTopBtn.style.display = "block";
-          } else {
-              goTopBtn.style.display = "none";
-          }
-      });
-    </script>
     <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
       <div class="scroll-top-icon">
           <i class="fa-solid fa-arrow-up"></i>
