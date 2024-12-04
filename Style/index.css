@@ -41,12 +41,7 @@ color: #ffffff;
 } 
 
 
-/* Css for language box */
-.lang-box{
-align-items: center;
-margin-top: auto;
-margin-bottom: auto;
-}
+
 .hidden{
 display: none;
 }

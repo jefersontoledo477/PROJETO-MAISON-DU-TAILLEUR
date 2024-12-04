@@ -64,7 +64,7 @@
                         <a class="dropdown-parent">Produtos</a>
                         <div class="cursor"></div>
                         <ul class="dropdown-content ">
-                            <li><a href="mens.html" class="priye">Men</a>
+                            <li><a href="Ternos.html" class="priye">Men</a>
                             </li>
                             <li><a href="accessories.html">Acessórios</a></li>
                         </ul>
@@ -186,7 +186,7 @@
     <section class="featured" data-aos="fade-left" data-aos-delay="300">
         <div class="featured-box-1">
             <div class="overlay">
-                <a href="mens.html" class="btn btn-white">
+                <a href="Ternos.html" class="btn btn-white">
                     Conjunto de ternos
                 </button></a>
             </div>
@@ -219,7 +219,7 @@
 
             <div class="featured-box-2-box-3">
                 <div class="overlay">
-                    <a href="mens.html" class="btn btn-white">
+                    <a href="Ternos.html" class="btn btn-white">
                         Sapato
                     </a>
                 </div>
@@ -246,7 +246,7 @@
     <!-- Produtos section  -->
 
     <section class="products">
-        <h1 class="section-title">Top Produtos Of The Season!</h1>
+        <h1 class="section-title">Produtos mais vendidos na semana!</h1>
 
         <div class="products-list">
 
@@ -393,7 +393,7 @@
 
     <!-- Produtos section 2 -->
     <section class="products">
-        <h1 class="section-title">Most Bought Produtos Of The Month!</h1>
+        <h1 class="section-title">Produtos Mais Comprados Do Mês!</h1>
 
         <div class="products-list">
 
@@ -560,35 +560,6 @@
             </ul>
         </div>
 
-        <div class="visitor-counter">
-            <span class="icon">👁️</span> <!-- You can replace this with an eye icon image if you prefer -->
-            <span id="visitorCount">Visitors Count:</span>
-            <span class="website-counter">0</span>
-        </div>
-    <script>
-          // Function to get the count from localStorage or initialize it
-    function getVisitorCount() {
-    return localStorage.getItem('visitorCount') || 0;
-    }
-
-    // Function to increment and save the count
-    function incrementVisitorCount() {
-    let count = parseInt(getVisitorCount()) + 1;
-    localStorage.setItem('visitorCount', count);
-    return count;
-    }
-
-    // Function to display the count
-    function displayVisitorCount() {
-    const counterElement = document.querySelector('.website-counter');
-    const count = incrementVisitorCount();
-    counterElement.textContent = count;
-    }
-
-    // Call the display function when the page loads
-    document.addEventListener('DOMContentLoaded', displayVisitorCount);
-    </script>
-
         <div class=" footer-section quick-links ">
             <h1>Links rápidos</h1>
             <ul class="footer-list">
@@ -602,21 +573,24 @@
         </div>
 
         <div class="footer-section">
-            <h1>Subscribe to MaisonduTailleur</h1>
+            <h1>Inscrever-se em MaisonduTailleur.</h1>
             <ul class="footer-list">
-                <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
-                <li>Join our fashion community today!</li>
+                <li>Seja o primeiro a saber sobre ofertas exclusivas e novidades direto na sua caixa de entrada.
+                    Junte-se à nossa comunidade de moda hoje!</li>
+                <li>Junte-se à nossa comunidade de moda hoje!</li>
                 <li class="sub">
-                    <input type="email" placeholder="Enter your email here" id="email-input">
-                    <button class="btn" id="open-btn">Subscribe</button>
+                    <input type="email" placeholder="Entre com seu E-mail" id="email-input">
+                    <button class="btn" id="open-btn">Inscrever-se
+                    </button>
                 </li>
             </ul>
+        </div>
         </div>
 
     </footer>
         
         <div class="footer-copyright">
-            <div id="copyright">&copy; <span id="year"></span> MaisonduTailleur. All Rights Reserved.</div>
+            <div id="copyright">&copy; <span id="year"></span> Todos os direitos reservados MaisonduTailleur.</div>
         </div>
         
         <script>
@@ -629,9 +603,9 @@
                 <div id="close-btn">&times;</div>
                 <div class="modal-content">
                     <img src="images\confirmation.png" alt="" height="100px" >
-                    <h2>Subscription Successful!</h2>
-                    <p>Thank you for subscribing.</p>
-                    <p> You will receive notifications, updates via email.</p>
+                    <h2>Assinatura realizada com sucesso!</h2>
+                    <p>Obrigado por se inscrever.</p>
+                    <p> Você receberá notificações e atualizações por e-mail.</p>
                 </div>
                 <div class="social">
                     <li class="socials">
@@ -714,20 +688,6 @@ document.getElementById("cart-icon").addEventListener("click", function() {
 
   
 </script>
-
-<div class="gtranslate_wrapper"></div>
-        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
-<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-
-<script>
-
-    window.addEventListener('scroll', function() {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        document.getElementById('progress-bar').style.width = scrolled + '%';
-    });
-    </script>
 
 <script src="./script/popup.js"></script>
 <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">

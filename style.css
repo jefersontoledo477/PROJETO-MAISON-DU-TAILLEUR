@@ -292,13 +292,6 @@ html {
   position: relative; 
 }
 
-.star{
-  margin: 10px;
-}
-.checked{
-   color: orange;
-}
-
 
 /* Add to Cart Button */
 .add-to-cart {

@@ -19,24 +19,7 @@ body {
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
-.star-rating {
-    display: flex;
-    margin: 10px 0;
-}
-.star-rating input {
-    display: none;
-}
-.star-rating label {
-    cursor: pointer;
-    font-size: 2em;
-    color: lightgray;
-    transition: color 0.3s;
-}
-.star-rating input:checked ~ label,
-.star-rating label:hover,
-.star-rating label:hover ~ label {
-    color: #f39c12;
-}
+
 label {
     font-size: 1.2em; /* Increased font size */
 }
