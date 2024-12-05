@@ -16,10 +16,6 @@
 
 <body>
 
-      <!-- scroll to top button  -->
-  <button class="go-top-btn">
-    <img   width="25px" src="/images/arrow_upper.png" alt="go top">
-</button>
     <header class="header" id="header">
         <div class="logo">
             <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
@@ -190,27 +186,7 @@
         </div>
     </footer>
 
-    <script>
-
- //js for go top button
- const goTopBtn = document.querySelector('.go-top-btn');
-    window.addEventListener('scroll', checkHeight)
-    function checkHeight() {
-      if (window.scrollY > 200) {
-        goTopBtn.style.display = "flex"
-      } else {
-        goTopBtn.style.display = "none"
-      }
-    }
-    goTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      })
-    })
-
-    </script>
-<script src="script/progressbar.js"></script>
+<script src="script/barradeProgresso.js"></script>
 
 </body>
 </html>
