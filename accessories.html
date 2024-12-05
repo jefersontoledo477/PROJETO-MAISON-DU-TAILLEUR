@@ -15,7 +15,7 @@
 </head>
 <body>
    
-    <!-- header section  -->
+    <!-- seção de cabeçalho -->
     <header class="header" id="header">
           <div class="logo">
             <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
@@ -47,7 +47,7 @@
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
                 </li>
                 <li class="nav-link">
                     <a href="Tela_de_login.html">
@@ -63,7 +63,7 @@
      <main>
         <div class="container">
             <div class="slider">
-                <img src="logo_with_wide_wooden_background.png" height="460px" width="auto"  >
+                <img src="/images/logo1.png" height="460px" width="auto"  >
             </div>
             <h2 class="my2" id="Relógios">Elegância</h2>
             <div class="cards">
@@ -718,22 +718,6 @@
 
     })();  // IIFE to avoid polluting global scope
     
-    document.getElementById("cart-icon").addEventListener("click", function() {
-    window.location.href = "carrinho.html";
-});
-
-// Select all share buttons and share option containers
-const shareButtons = document.querySelectorAll('.share-icon');
-const shareOptions = document.querySelectorAll('.share-options');
-
-// Loop through each share button and attach event listener
-shareButtons.forEach((shareBtn, index) => {
-    shareBtn.addEventListener('click', () => {
-        console.log(`Share button ${index + 1} clicked`);
-        shareOptions[index].classList.toggle('active');
-    });
-});
-
 
 const copyBtns = document.querySelectorAll('.copy-btn'); // Get all copy buttons
 const linkTexts = document.querySelectorAll('.link'); // Get all link texts
